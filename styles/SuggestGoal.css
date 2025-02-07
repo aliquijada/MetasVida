@@ -1,0 +1,61 @@
+.suggest-goal-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .suggest-goal-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .suggest-goal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .suggest-goal-form label {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .suggest-goal-form input,
+  .suggest-goal-form select,
+  .suggest-goal-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .suggest-goal-form button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .suggest-goal-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+  

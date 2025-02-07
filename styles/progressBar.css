@@ -1,0 +1,47 @@
+/* Contenedor principal */
+.progress-container-main {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: space-between; /* Distribuye espacio entre los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 20px; /* Añade espacio interno horizontal */
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Sección de texto, contador e imagen alineados a la izquierda */
+.progress-left-main {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+  gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Imagen en la sección izquierda */
+.progress-character-main {
+  width: 60px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Barra de progreso */
+.progress-bar-container-main {
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  height: 30px; /* Altura total de la barra */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: 20px; /* Espacio entre la barra y la sección izquierda */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  position: relative;
+}
+
+/* Relleno de la barra de progreso */
+.progress-bar-fill-main {
+  height: 80%; /* Más alto que ancho para un rectángulo vertical alargado */
+  background-color: black; /* Fondo negro */
+  width: 10%; /* Cambiar dinámicamente desde JavaScript */
+  transition: width 0.4s ease-in-out;
+  position: absolute; /* Asegura que el relleno se ubique correctamente */
+  left: 0; /* Inicia desde la izquierda */
+}

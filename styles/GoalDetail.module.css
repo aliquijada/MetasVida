@@ -1,0 +1,64 @@
+/* 📌 Lista de hitos */
+.hitosList {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 📌 Estilo base para los elementos de la lista */
+.hitosListItem {
+  margin-bottom: 10px;
+  line-height: 1.8;
+  padding-left: 40px;
+  position: relative;
+}
+
+/* 📌 Viñetas personalizadas */
+.hitosListItem.status-pendiente::before {
+  content: "⏳";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #ff9800;
+  text-align: center;
+  font-weight: bold;
+  color: #ff9800;
+}
+
+.hitosListItem.status-en-proceso::before {
+  content: "🔄";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #2196f3;
+  text-align: center;
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.hitosListItem.status-completado::before {
+  content: "✔️";
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+  text-align: center;
+  font-weight: bold;
+  color: #4caf50;
+}

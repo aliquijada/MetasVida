@@ -1,0 +1,90 @@
+.navbar {
+  background-color: #fbf4d8;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #688584;
+  border-image: url("data:image/svg+xml,%3Csvg width='200' height='4' viewBox='0 0 200 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,2 C20,1 40,3 60,2 S100,1 140,2 S180,3 200,2' stroke='%23688584' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") 1;
+}
+
+/* Contenedor de la barra de navegación */
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo de la Navbar */
+.navbarLogo {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #0e253a;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Menú de navegación */
+.navMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elementos individuales del menú */
+.navItem {
+  margin-left: 2rem;
+}
+
+/* Enlaces del menú */
+.navLink {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #0e253a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Botón de logout */
+.navButton {
+  all: unset;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #0e253a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #688584;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.navButton:hover {
+  background-color: #688584;
+  color: white;
+}
+
+/* Responsive: Ajusta la navbar en pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbarContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navMenu {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navItem {
+    margin: 10px 0;
+  }
+}

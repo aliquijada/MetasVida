@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+
 
 :root {
   --background: #ffffff;
@@ -14,8 +16,22 @@
   }
 }
 
+/* Aplica el fondo degradado a todo el body */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #b4c4b8, #fbf4d8); /* Degradado de verde a beige */
+  color: #333; /* Color del texto */
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+  display: flex;
+  flex-direction: column;
 }
+
+/* Asegura que #__next ocupe toda la pantalla */
+#__next {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+

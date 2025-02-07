@@ -1,0 +1,67 @@
+/* Estilo base de las tarjetas */
+.card {
+  width: 100%; 
+  max-width: 200px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* 📌 Efecto hover */
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Imagen dentro de la tarjeta */
+.imageContainer img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* 📌 Estilos según el estado */
+.pending {
+  background-color: #FFE5E5;
+  border: 2px solid #e79090;
+  color: #333;
+}
+
+.inProgress {
+  background-color: #FFF9DB;
+  border: 2px solid #FFC107;
+  color: #333;
+}
+
+.completed {
+  background-color: #DFF6DD;
+  border: 2px solid #85C78F;
+  color: #333;
+}
+
+/* 📌 Títulos y textos */
+.cardTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+  font-weight: bold;
+}

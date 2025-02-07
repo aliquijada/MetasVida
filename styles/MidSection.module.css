@@ -1,0 +1,61 @@
+.threeColumnSection {
+  display: flex;
+  flex-direction: row; /* Alinea las columnas en fila */
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente */
+  padding: 20px;
+  background-image: url('/images/main_background.png');
+  background-size: cover; /* Cubre todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  color: white; /* Asegura que el texto sea visible si el fondo es oscuro */
+  width: 100%;
+  min-height: 100vh; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+
+/* Columnas dentro de la sección */
+.columnBs, .centerText, .rightImage {
+  flex: 1;
+  margin: 10px; /* Espaciado entre columnas */
+  text-align: center; /* Centra el contenido dentro de cada columna */
+}
+
+.centerText {
+  color: #0e253a;
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para mejorar la legibilidad */
+  border-radius: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.rightImage img {
+  max-width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Sección de Búsqueda */
+.searchSection {
+  display: flex;
+  justify-content: center; /* Centra la barra de búsqueda */
+  margin: 20px 0; /* Espaciado vertical */
+}
+
+.searchInput {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #007bff;
+}

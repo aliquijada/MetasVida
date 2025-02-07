@@ -1,0 +1,121 @@
+/* 📌 Contenedor de la categoría e imagen */
+.categoryImageContainer {
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  margin: 10px auto; /* Espaciado superior/inferior y centra horizontalmente */
+  padding: 0px; /* Espaciado interno alrededor de la imagen */
+  max-width: 220px; /* Ancho máximo del contenedor */
+
+}
+
+/* 📌 Imagen de la categoría */
+.categoryImage {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la proporción */
+  max-width: 220px;
+  max-height: 240px; /* Ajusta la altura máxima */
+  object-fit: contain; /* Evita distorsión */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 📌 Contenedor superior */
+.upperBox {
+  background-color: #fbf4d8;
+  border-radius: 20px;
+  margin: 0px auto;
+  margin-top: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 800px;
+}
+
+/* 📌 Ajuste del Contenedor SVG */
+.svgContainer {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: 100px; /* Ajusta la altura para que la curva se vea bien */
+}
+
+/* 📌 Texto en la Curva */
+.svgText {
+  font-family: 'Lexend', sans-serif;
+  font-size: 2rem;
+  fill: #333;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 2px;
+}
+
+
+/* 📌 Contenedor de las tarjetas */
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Tarjetas responsivas */
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 20px; /* Espaciado interno del contenedor */
+  justify-items: center; /* Centra las tarjetas en su celda */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 📌 Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .upperBox {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .svgContainer {
+    max-width: 350px;
+  }
+
+  #svg-text {
+    font-size: 2rem;
+  }
+
+  .categoryImageContainer {
+    max-width: 180px;
+  }
+
+  .categoryImage {
+    max-width: 180px;
+    max-height: 200px;
+  }
+
+  .cardList {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .upperBox {
+    max-width: 95%;
+    padding: 8px;
+  }
+
+  .svgContainer {
+    max-width: 300px;
+  }
+
+  #svg-text {
+    font-size: 1.8rem;
+  }
+
+  .categoryImageContainer {
+    max-width: 160px;
+  }
+
+  .categoryImage {
+    max-width: 160px;
+    max-height: 180px;
+  }
+
+  .cardList {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}

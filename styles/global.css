@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #a4bca6, #dde0c5);
+    border: red 10px;
+  } 

@@ -1,0 +1,36 @@
+.add-goal-container .submissions-section {
+  margin-top: 20px;
+}
+
+.submission-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.add-submission-button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-submission-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
