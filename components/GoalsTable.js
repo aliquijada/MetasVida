@@ -4,6 +4,7 @@ import { useRouter } from "next/router"; // Importa useRouter de Next.js
 import Image from "next/image";
 import styles from "@/styles/GoalsTable.module.css";
 import Card from "@/components/Card"; // Asegúrate de que la ruta sea correcta
+import Link from 'next/link';
 
 // Importación de imágenes de categorías
 import manualidades from "@/public/images/Categorias/manualidades.png";
@@ -75,10 +76,6 @@ const GoalsTable = () => {
     return <div>{error}</div>;
   }
 
-  // Función para manejar clics en las tarjetas
-  const handleCardClick = (goalId) => {
-    router.push(`/goals/${goalId}`); // Redirige a la página de la meta específica
-  };
 
   return (
     <div>
@@ -120,9 +117,9 @@ const GoalsTable = () => {
       {goals.length > 0 ? (
         <div className={styles.cardList}>
           {goals.map((goal) => (
-            <div key={goal.id} onClick={() => handleCardClick(goal.id)}>
-              <Card name={goal.Mision} status={goal.Status_m} />
-            </div>
+            <Link key={goal.id} href={`/goals/${goal.id}`} className={styles.cardLink}>
+              <Card mision={goal} />
+            </Link>
           ))}
         </div>
       ) : (

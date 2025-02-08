@@ -12,7 +12,9 @@ const statusImages = {
   COMPLETO: completedImg,
 };
 
-export default function Card({ name, status }) {
+export default function Card({ mision }) {
+  const name = mision.Mision;
+  const status = mision.Status_m
   // Clases de estado dinámicas
   const statusClass = status === "COMPLETO" 
     ? styles.completed 
