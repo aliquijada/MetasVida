@@ -1,64 +1,199 @@
+/* 📌 Estilos Generales */
+.notebook {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  background: #fff;
+  font-family: "Arial", sans-serif;
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* 📌 Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.title {
+  border: 2px dashed #bbb;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* 📌 Contenido */
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.left-column p {
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-placeholder {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+/* 📌 Footer */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 📌 Estados de la meta */
+.statusPending {
+  color: red;
+  font-weight: bold;
+}
+
+.statusInProgress {
+  color: orange;
+  font-weight: bold;
+}
+
+.statusCompleted {
+  color: green;
+  font-weight: bold;
+}
+
 /* 📌 Lista de hitos */
 .hitosList {
   list-style-type: none;
-  padding-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-left: 0;
+  margin: 15px 0;
 }
 
-/* 📌 Estilo base para los elementos de la lista */
+/* 📌 Elementos de la lista */
 .hitosListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 10px;
-  line-height: 1.8;
-  padding-left: 40px;
   position: relative;
+  padding-left: 45px;
 }
 
-/* 📌 Viñetas personalizadas */
-.hitosListItem.status-pendiente::before {
-  content: "⏳";
-  font-size: 1.5rem;
+/* 📌 Viñetas personalizadas con iconos */
+.hitosListItem::before {
+  content: "•";
+  font-size: 1.4rem;
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  border: 2px solid #ff9800;
-  text-align: center;
   font-weight: bold;
+}
+
+/* ⏳ Estado PENDIENTE */
+.hitosListItem.statusPending::before {
+  content: "⏳";
+  border: 2px solid #ff9800;
   color: #ff9800;
 }
 
-.hitosListItem.status-en-proceso::before {
+/* 🔄 Estado EN PROCESO */
+.hitosListItem.statusInProgress::before {
   content: "🔄";
-  font-size: 1.5rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
   border: 2px solid #2196f3;
-  text-align: center;
-  font-weight: bold;
   color: #2196f3;
 }
 
-.hitosListItem.status-completado::before {
+/* ✔️ Estado COMPLETADO */
+.hitosListItem.statusCompleted::before {
   content: "✔️";
-  font-size: 1.5rem;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+}
+
+/* 📌 Efecto hover en la lista */
+.hitosListItem:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease-in-out;
+}
+
+/* 📌 Contenedor de la barra de progreso */
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+/* 📌 Barra de progreso */
+.progress-bar-container {
+  width: 300px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* 📌 Relleno de la barra de progreso */
+.progress-bar-fill {
+  width: 10%;
+  height: 100%;
+  background-color: black;
+  transition: width 0.4s ease-in-out;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid #4caf50;
-  text-align: center;
-  font-weight: bold;
-  color: #4caf50;
+  border-radius: 3px;
 }
